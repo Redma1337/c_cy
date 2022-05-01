@@ -6,10 +6,10 @@
 #define OPTSTR "dk:p:"
 
 unsigned long hash(unsigned char *str);
-void          xor_bytes(char** buffer, char* content_buffer, size_t length, unsigned long key);
+void          xor_bytes(char** dest, char* orig, size_t length, unsigned long key);
 int           encrypt(char* path, char* pw);
-int           write_file_bytes(char* content_buffer, char* path);
-int           get_file_bytes(char** file_buffer, char* path);
+int           write_file_bytes(char* orig, char* path);
+int           get_file_bytes(char** dest, char* path);
 
 int 
 main(int argc, char** argv) {
